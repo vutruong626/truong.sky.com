@@ -1,0 +1,560 @@
+/*
+	Theme Name: Lady Boss
+	Theme URI: http://ladyboss.adalainethemes.com
+	Description: A Gutenberg ready feminine WordPress theme built for the Genesis Framework by Adalaine Design.
+	Author: Adalaine Design
+	Author URI: https://adalainedesign.com/
+	Copyright: Copyright (c) 2019, Adalaine Design, Released 20/02/2019
+
+	Template: genesis
+	Template Version: 1.0.1
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+/* Front Page
+---------------------------------------------------------------------------------------------------- */
+
+.front-page .site-inner {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.front-page .content-sidebar-wrap {
+	margin: 0px auto;
+	max-width: 1200px;
+}
+
+.front-page .blog {
+	margin: 50px auto;
+}
+
+.front-page .wrap {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.front-page .entry-header {
+	margin-bottom: 0;
+}
+
+.front-page p:last-child,
+.front-page .widget:last-child {
+	border: none;
+}
+
+.front-page .icon {
+    color: #ae9d78;
+    display: block;
+    font-size: 30px;
+}
+
+.front-page .widget-area h3 {
+	color: #ae9d78;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 26px;
+	font-weight: 300;
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 0 10px;
+}
+
+.front-page .blog.widget-area h3 {
+	margin-bottom: 50px;
+}
+
+.front-page .home-slider-overlay.widget-area h3 {
+	margin-bottom: 30px;
+}
+
+.front-page .site-inner .widget-title {
+	font-size: 30px;
+    letter-spacing: 0px;
+    color: #ae9d78;
+    margin: 0;
+    font-family: 'Sscript';
+}
+
+.front-page .site-inner .content-sidebar-wrap .widget-title {
+	color: #000;
+}
+
+.home-slider-overlay .widget-title {
+	font-family: 'Cormorant Garamond', serif;
+	font-style: italic;
+	font-size: 22px;
+	letter-spacing: 5px;
+	color: #ae9d78;
+	margin: 0;
+}
+
+.front-page .featured-content .entry {
+	padding: 0;
+}
+
+.front-page-1 .featured-content .entry-header {
+
+}
+
+.front-page-1 .featured-content .entry,
+.front-page-3 .featured-content .entry {
+	background: none;
+}
+
+.front-page-1 .featured-content .entry-header .entry-title a {
+	font-family: 'Sscript';
+    font-size: 35px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    margin: 0;
+    overflow: visible;
+    text-align: center;
+    width: 100%;
+    text-transform: lowercase;
+    font-weight: bold;
+	
+}
+.front-page-1 .featured-content .entry-header .entry-title a::before{
+    content: "";
+    height: 2px;
+    width: 50px;
+    background: #f0ede5;
+    display: block;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin: 0 auto 15%;
+    position: relative;
+    z-index: 1;
+}
+
+.front-page-1 img.alignnone, 
+.front-page-1 .alignnone {
+	margin: 0;
+}
+
+.front-page-1 .featured-content .entry-header h2 {
+	margin: 0;
+}
+
+.front-page-1 .featured-content .entry img, 
+.front-page-2 .featured-content .entry img , 
+.front-page-3 .featured-content .entry img,
+.front-page-4 .featured-content .entry img ,
+.front-page-5 .featured-content .entry img {
+-webkit-box-shadow: 0 1px 5px 0 #cbcbcb;
+-moz-box-shadow: 0 1px 5px 0 #cbcbcb;
+box-shadow: 0 1px 5px 0 #cbcbcb;
+}
+
+.front-page-1 .featured-content .entry a img,
+.front-page-2 .featured-content .entry a img , 
+.front-page-3 .featured-content .entry a img,
+.front-page-4 .featured-content .entry a img ,
+.front-page-5 .featured-content .entry a img{
+opacity: 1;
+-webkit-transition: opacity .2s cubic-bezier(0,1,.75,1), transform 2.5s cubic-bezier(0,1,.75,1);
+-moz-transition:    opacity .2s cubic-bezier(0,1,.75,1), transform 2.5s cubic-bezier(0,1,.75,1);
+-ms-transition:     opacity .2s cubic-bezier(0,1,.75,1), transform 2.5s cubic-bezier(0,1,.75,1);
+-o-transition:      opacity .2s cubic-bezier(0,1,.75,1), transform 2.5s cubic-bezier(0,1,.75,1);
+transition:         opacity .2s cubic-bezier(0,1,.75,1), transform 2.5s cubic-bezier(0,1,.75,1);
+}
+
+.front-page-1 .featured-content .entry img:hover,
+.front-page-2 .featured-content .entry img:hover , 
+.front-page-3 .featured-content .entry img:hover,
+.front-page-4 .featured-content .entry img:hover ,
+.front-page-5 .featured-content .entry img:hover{
+transform: scale(1.1);
+}
+
+.front-page-1 .featured-content .entry img,
+.front-page-2 .featured-content .entry img , 
+.front-page-3 .featured-content .entry img,
+.front-page-4 .featured-content .entry img ,
+.front-page-5 .featured-content .entry img{
+-webkit-transition:  all .2s linear;
+-moz-transition:  all .2s linear;
+-o-transition:  all .2s linear;
+transition:  all .2s linear;
+}
+
+.front-page-3 .flexible-widgets.widget-area .widget:nth-of-type(2){
+	margin-right: -25px;
+}
+
+.front-page-3 .flexible-widgets.widget-area .widget:nth-of-type(3){
+	margin-top: 30px;
+    max-width: 480px;
+    margin-left: -25px;
+    z-index: 99;
+    position: relative;
+
+}
+
+.textabout{
+	text-align: justify;
+    background: #fff;
+    padding: 35px;
+}
+
+.front-page .site-inner .front-page-3 .widget-title{
+	font-size: 40px;
+}
+
+.front-page-3 .soliloquy-container{
+	float: right !important;
+}
+
+/* Slider Overlay
+------------------------------------------------------ */
+
+.home-slider {
+	background: #fff;
+    padding: 0 3.5% 3.5%;
+    overflow: hidden;
+}
+
+
+.home-slider-container {
+    position: relative;
+    margin: 0 auto -40px;
+    background: #fff;
+    padding-top: 30px;
+}
+
+.home-slider-overlay .wrap {
+	background: rgba(255,255,255, 1);
+	position: absolute;
+	left: 65%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 30px 60px;
+	text-align: center;
+	width: auto;
+	max-width: 25%;
+}
+
+.home-slider-overlay .wrap .widget {
+	padding: 30px 0;
+}
+
+.home-slider-overlay .widget-title::after {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Full width Soliloquy slider
+------------------------------------- */
+
+/* To get rid of -4px bottom margin for image links */
+a img {
+margin-bottom: 0;
+}
+
+/* To avoid noticeable vertical movement for hover state of Soliloquy's Control Nav (typically circles) */
+.soliloquy-container .soliloquy-control-nav li a,
+.soliloquy-theme-classic .soliloquy-pager-link {
+-webkit-transition: none;
+-moz-transition:    none;
+-ms-transition:     none;
+-o-transition:      none;
+transition:         none;
+}
+
+/* To remove bottom border for Soliloquy controls */
+.entry-content .soliloquy-controls-direction a, .entry-content a.soliloquy-pager-link {
+border-bottom: none;
+}
+
+
+.home-slider .soliloquy-container {
+max-width: none !important;
+max-height: 100% !important;
+}
+
+.home-slider .soliloquy-container .soliloquy-image {
+width: 100% !important;
+}
+
+.home-slider .soliloquy-container .soliloquy-caption-inside {
+padding: 30px;
+}
+
+.home-slider .soliloquy-container .slide-caption {
+max-width: 960px;
+margin: 0 auto;
+}
+
+
+/* Soliloquy Captions
+------------------------------------- */
+
+.soliloquy-container .soliloquy-prev {
+display: block;
+width: auto !important;
+height: auto !important;
+position: absolute;
+top: 70%;
+margin-top: 0;
+left: -30px !important;
+z-index: 1320;
+background: transparent!important;
+}
+
+.soliloquy-container .soliloquy-prev::before {
+content: "PREV";
+letter-spacing: .5em;
+display: inline-block;
+z-index: 12;
+transform: rotate(-90deg);
+top: 40px;
+height: 0;
+width: 0;
+white-space: nowrap;
+position: absolute;
+}
+
+.soliloquy-container .soliloquy-next::after {
+content: "NEXT";
+letter-spacing: .5em;
+display: inline-block;
+z-index: 12;
+transform: rotate(90deg);
+top: -17px;
+height: 0;
+width: 0;
+white-space: nowrap;
+position: absolute;
+}
+
+.soliloquy-container .soliloquy-next {
+display: block;
+width: auto !important;
+height: auto !important;
+position: absolute;
+top: 70%;
+right: -30px !important;
+margin-top: 0;
+z-index: 1320;
+background: transparent!important;
+}
+
+.soliloquy-caption-inside {
+background: transparent !important;
+color: #222 !important;
+font-size: 2.0rem !important;
+line-height: 1.5 !important;
+padding: 20px 0px !important;
+text-shadow: none !important;
+}
+
+.soliloquy-container .soliloquy-caption {
+width: 40% !important;
+margin-left: 1% !important;
+margin-bottom: 5% !important;
+background: none !important;
+padding: 2% !important;
+}
+
+.soliloquy-container .soliloquy-caption h1 {
+font-size: 6.0rem !important;
+line-height: 1 !important;
+letter-spacing: .05em !important;
+text-align: left !important;
+text-transform: uppercase !important;
+}
+
+.soliloquy-container .soliloquy-caption h2 {
+font-size: 3.8rem !important;
+line-height: 1 !important;
+letter-spacing: .05em !important;
+text-align: left !important;
+text-transform: none !important;
+}
+
+.soliloquy-container .soliloquy-caption h3 {
+font-size: 1.6rem !important;
+line-height: 2 !important;
+text-align: center !important;
+text-transform: uppercase;
+letter-spacing: 3px !important;
+}
+
+
+.soliloquy-container .soliloquy-caption .button {
+float: left;
+background: none;
+border: none;
+outline: none;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #222;
+margin-top: 5%;
+font-size: 1.6rem;
+}
+
+.soliloquy-container .soliloquy-caption .button:hover {
+color: #da997b;
+background: none;
+border: none;
+outline: none;
+}
+
+.soliloquy-container .soliloquy-caption .button::before {
+content: "";
+height: 1px;
+width: 70px;
+background: #222;
+display: inline-block;
+z-index: 1;
+margin-bottom: 6px;
+margin-right: 10px;
+}
+
+.soliloquy-container .soliloquy-pager{
+	display:none !important;
+}
+
+
+/* Front Page Areas
+--------------------------------------------- */
+
+.front-page-1,
+.front-page-2,
+.front-page-3,
+.front-page-4,
+.front-page-5 {
+	overflow: hidden;
+	text-align: center;	
+}
+
+.front-page-1,
+.front-page-2,
+.front-page-3,
+.front-page-4,
+.front-page-5 {
+	padding: 50px 0;
+}
+
+.front-page-2,
+.front-page-4 {
+	background: none;
+}
+
+.front-page-1,
+.front-page-3,
+.front-page-5 {
+	background: #fff;
+}
+
+.front-page-1 .flexible-widgets .widget:nth-child(2), 
+.front-page-1 .flexible-widgets .widget:nth-child(4){
+	margin-top:3%;
+}
+
+.front-page-1 .entry,
+.front-page-2 .entry,
+.front-page-3 .entry,
+.front-page-4 .entry,
+.front-page-5 .entry {
+	background:transparent;
+}
+
+
+/* Journal
+--------------------------------------------- */
+
+.journal .widget-title {
+	text-align: center;
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+
+.home-slider-overlay .wrap {
+		border: none;
+		position: static;
+		-webkit-transform: none;
+		-o-transform: none;
+		transform: none;
+		max-width: 100%;
+	}
+	
+.front-page .wrap {
+	width: 100%;
+}
+
+.site-inner {
+	padding: 0;
+}
+	
+}
+
+@media only screen and (max-width: 800px){
+		.front-page-1{
+		padding:0;
+	}
+	
+	.front-page-3 .soliloquy-container{
+	float: unset !important;
+    text-align: center;
+    margin: auto !important;
+	}
+	
+	.front-page-3 .flexible-widgets.widget-area .widget:nth-of-type(3){
+	max-width: 80%;
+    margin-left: auto;
+	text-align: center;
+    margin-right: auto;
+    float: unset;
+	}
+	
+	.textabout{
+		padding: 35px 35px 0 35px;
+	}
+	
+	.flexible-widgets.widget-thirds .widget {
+    width: 80.33%;
+    padding: 30px !important;
+    float: unset;
+    margin: auto;
+	}
+	
+	.front-page-1 .flexible-widgets.widget-thirds .widget{
+	width: 33.33%;
+    padding: 30px !important;
+    float: left;
+	}
+	
+}
+
+@media only screen and (max-width: 500px) {
+	
+	.front-page .blog .entry {
+		float: none;
+		width: 100%;
+	}
+	
+	.front-page-1 .flexible-widgets.widget-thirds .widget {
+    width: 85%;
+    padding: 0;
+    float: unset;
+}
+	.front-page-3 .flexible-widgets.widget-area .widget:nth-of-type(3) {
+		max-width: 90%;}
+	
+	.flexible-widgets.widget-thirds .widget {
+		width: 100%;}
+	
+	
+
+
+}
