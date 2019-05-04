@@ -53,7 +53,6 @@
 											<div class="quantity">
 												<label class="screen-reader-text" for="quantity_5ccbf63c36e8f">Quantity</label>
                                                 <input type="number" 
-                                                        id="quantity_5ccbf63c36e8f" 
                                                         class="input-text qty text" 
                                                         step="1" min="0" max="" 
                                                         name="quantity" 
@@ -67,29 +66,28 @@
 										</td>
 
 										<td class="product-subtotal" data-title="Total">
-											<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>100.00</span>						
+											<span class="woocommerce-Price-amount amount"  id="p_{{$item_products_cart->id}}">
+                                                <span class="woocommerce-Price-currencySymbol"></span>{{number_format($item_products_cart->price * $item_products_cart['qty'] )}} VNĐ</span>						
 										</td>
 														
                                     </tr>
-                                    <input type="hidden" name="id_product[]" id="id_{{$item_products_cart->id}}">
+                                    		<input type="hidden" name="id_product[]" id="id_{{$item_products_cart->id}}">
                                             <input type="hidden" name="number_product[]" id="num_{{$item_products_cart->id}}" >
                                     @endforeach
 
 									<tr>
+										@if(count($products_cart) > 0)
 										<td colspan="6" class="actions">
-
-											<div class="coupon">
+											<!-- <div class="coupon">
 												<label for="coupon_code">Coupon:</label> 
 												<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code"> 
 												<button type="submit" class="button" name="apply_coupon" value="Apply coupon">Apply coupon</button>
-											</div>
-
+											</div> -->
 											<button type="submit" class="button" name="update_cart" value="Update cart" disabled="">Update cart</button>
-
-
 											<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="2b741283dc">
-											<input type="hidden" name="_wp_http_referer" value="/cart/">				
+											<input type="hidden" name="update_cart" value="/cart/">				
 										</td>
+										@endif
 									</tr>
 
 								</tbody>
@@ -100,16 +98,21 @@
 								<h2>Cart totals</h2>
 								<table cellspacing="0" class="shop_table shop_table_responsive">
 									<tbody>
-										<tr class="cart-subtotal">
+										<!-- <tr class="cart-subtotal">
 											<th>Subtotal</th>
 											<td data-title="Subtotal">
 												<span class="woocommerce-Price-amount amount">
 													<span class="woocommerce-Price-currencySymbol">$</span>100.00</span>
 											</td>
-										</tr>
+										</tr> -->
 										<tr class="order-total">
 											<th>Total</th>
-											<td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>100.00</span></strong> </td>
+											<td data-title="Total">
+												<strong>
+													<span class="woocommerce-Price-amount amount" id="p_">
+														<span class="woocommerce-Price-currencySymbol"></span>{{number_format($cart_detail['weight'],0)}} VNĐ</span>
+												</strong> 
+											</td>
 										</tr>
 
 
@@ -118,7 +121,7 @@
 
 								<div class="wc-proceed-to-checkout">
 
-									<a href="https://ladyboss.adalainethemes.com/checkout/" class="checkout-button button alt wc-forward">
+									<a href="{{route('pay')}}" class="checkout-button button alt wc-forward">
 									Proceed to checkout</a>
 								</div>
 

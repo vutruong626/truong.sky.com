@@ -22,6 +22,8 @@ Route::prefix('/')->group(function () {
     Route::get('/kiem-tra','Frontend\\ProductController@getCheckout')->name('checkout');
     Route::post('/gio-hang-update','Frontend\\ProductController@postSessionCart')->name('update_giohang');
     Route::get('/thanh-toan','Frontend\\ProductController@getPay')->name('pay');
+    Route::post('/thanh-toan','Frontend\\ProductController@postPay');
+    Route::get('/thanh-toan-thanh-cong','Frontend\\ProductController@getSuccess')->name('success');
 });
 
 Route::group(['prefix' => 'admin'], function () {
