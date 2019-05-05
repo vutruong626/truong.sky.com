@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6eb29d303218d52b13ec71f437f1ff54",
+    "content-hash": "aead00ff120a6923b546398d62f43d0c",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -67,6 +67,66 @@
                 "widgets"
             ],
             "time": "2019-03-25T14:20:55+00:00"
+        },
+        {
+            "name": "artogrig/laravel-make-service",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artogrig/laravel-make-service.git",
+                "reference": "d9aac007d6a86a73c4eed2449dbd6ffb0afae91d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artogrig/laravel-make-service/zipball/d9aac007d6a86a73c4eed2449dbd6ffb0afae91d",
+                "reference": "d9aac007d6a86a73c4eed2449dbd6ffb0afae91d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Artogrig\\LaravelMakeService\\LaravelMakeServiceServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelMakeService": "Artogrig\\LaravelMakeService\\Facades\\LaravelMakeService"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Artogrig\\LaravelMakeService\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artavazd Grigoryan",
+                    "email": "artogrig@gmail.com"
+                }
+            ],
+            "description": "An Artisan console command to create service in your Laravel application.",
+            "homepage": "https://github.com/artogrig/laravel-make-service",
+            "keywords": [
+                "LaravelMakeService",
+                "artogrig",
+                "command",
+                "console",
+                "laravel",
+                "make",
+                "service"
+            ],
+            "time": "2018-05-18T10:46:23+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -3783,6 +3843,56 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
+            "name": "tongvanduc/nganluong",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tongvanduc/nganluong.git",
+                "reference": "f9716bc93dda62d465ba6bfb03f3166379bc29d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tongvanduc/nganluong/zipball/f9716bc93dda62d465ba6bfb03f3166379bc29d2",
+                "reference": "f9716bc93dda62d465ba6bfb03f3166379bc29d2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.1",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TongVanDuc\\NganLuong\\NganLuongServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TongVanDuc\\NganLuong\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tong Van Duc",
+                    "email": "tongduc315@gmail.com",
+                    "homepage": "http://ahihi.space"
+                }
+            ],
+            "description": "Tích hợp thanh toán qua Ngân Lượng cho website Laravel 5.6.",
+            "keywords": [
+                "laravel",
+                "nganluong",
+                "tongvanduc"
+            ],
+            "time": "2018-05-29T15:53:21+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.6.1",
             "source": {
@@ -5564,7 +5674,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tongvanduc/nganluong": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -83,7 +83,7 @@
 												<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code"> 
 												<button type="submit" class="button" name="apply_coupon" value="Apply coupon">Apply coupon</button>
 											</div> -->
-											<button type="submit" class="button" name="update_cart" value="Update cart" disabled="">Update cart</button>
+											<button type="submit" class="button" name="update_cart" value="Update cart">Update cart</button>
 											<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="2b741283dc">
 											<input type="hidden" name="update_cart" value="/cart/">				
 										</td>

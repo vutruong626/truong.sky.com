@@ -10,6 +10,12 @@ use Mail;
 use App\Models\Post;
 use App\Models\Order;
 use App\Models\DetailOrder;
+use TongVanDuc\NganLuong;
+use Symfony\Component\Routing\Route;
+use App\Services\NganluongServices;
+use League\Flysystem\Config;
+use Illuminate\Support\Facades\Redirect;
+
 class ProductController extends Controller
 {
     /**
@@ -172,6 +178,7 @@ class ProductController extends Controller
      */
     public function postPay(Request $request,$idsp,$qty=0)
     {
+        
         // print_r($request->all());die;
         $rules = [
             'name' => 'required',
@@ -196,6 +203,7 @@ class ProductController extends Controller
               ];      
 
               $validator = Validator::make($request->all(), $rules,$messages);
+            //   dd($validator);
               if ($validator->fails()) {
                   return redirect()->back()->withErrors($validator)->withInput();
               }else {
@@ -242,21 +250,52 @@ class ProductController extends Controller
                 //                 ->where('id',$request->district)
                 //                 ->first();
                 // $area['district'] = trim($district->name);
-                $area['payment_label'] = trim($request->payment_label);
-                Mail::send('frontend.email.email', ['data_dh'=>$data_dh,'area'=>$area,'cart_detail'=>$cart_detail], function ($message) use ($data_dh){
-                $message->from('websitedfm@gmail.com', 'greenliving.vip');
-                $message->subject('Đơn hàng #');
-                $message->bcc($data_dh->email);
-                $message->to('websitedfm@gmail.com');
-            });
+            //     $area['payment_label'] = trim($request->payment_label);
+            //     Mail::send('frontend.email.email', ['data_dh'=>$data_dh,'area'=>$area,'cart_detail'=>$cart_detail], function ($message) use ($data_dh){
+            //     $message->from('websitedfm@gmail.com', 'greenliving.vip');
+            //     $message->subject('Đơn hàng #');
+            //     $message->bcc($data_dh->email);
+            //     $message->to('websitedfm@gmail.com');
+            // });
             $request->session()->forget('cart');
             $request->session()->forget('cart_detail');
+            $url = $this->connectNganLuong($data_dh->id,$total);
             // $data = session()->get('cart');
             // print_r($data);die;
-        return redirect()->route('success');
+            return Redirect::to($url);
+            
     }
 
-    public function getSuccess(){
-        return view('frontend.product.success');
+    public function getSuccess(Request $request){
+        $price = $request->get('price');
+        $order_code = $request->get('order_code');
+        // dd($request->get('order_code'));
+
+        return view('frontend.product.success',compact('order_code','price'));
+    }
+
+    public function connectNganLuong ($order_code, $price) {
+        // Lấy các tham số để chuyển sang Ngânlượng thanh toán:
+        
+        //Khai báo url trả về 
+        $return_url= Route('success');
+        // Link nut hủy đơn hàng
+        $cancel_url= $_SERVER['HTTP_REFERER'];	
+        	
+        //Thông tin giao dịch
+        $transaction_info="Thong tin giao dich";
+                //Khai báo đối tượng của lớp NL_Checkout= 
+        $nl= new NganluongServices();
+        // dd('ss');
+        $nl->nganluong_url = Config('nganluong.url_api');
+        $nl->merchant_site_code = Config('nganluong.merchant_id');
+        $nl->secure_pass = Config('nganluong.merchant_password');
+        $receiver=Config('nganluong.receiver_email');
+        //Tạo link thanh toán đến nganluong.vn
+        $url= $nl->buildCheckoutUrl($return_url, $receiver, $transaction_info, $order_code, $price);
+        // dd(Config('nganluong'), $url);
+        //$url= $nl->buildCheckoutUrl($return_url, $receiver, $transaction_info, $order_code, $price);
+        // dd($url);
+        return $url;
     }
 }
