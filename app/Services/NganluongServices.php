@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services; // chay lenh tao service: composer require artogrig/laravel-make-service and php artisan make:service NganluongServices
 
 class NganluongServices
 {
